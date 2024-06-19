@@ -19,6 +19,7 @@ int main()
     //Calculate average
     dAvg = (double) (iRoll1 + iRoll2 + iRoll3) / iNoRolls;
 
+    cout << "Number of rolls is " << iNoRolls << endl;
     cout << setprecision(2) << setiosflags(ios::fixed);
     cout << "average roll is " << dAvg << endl;
 }
