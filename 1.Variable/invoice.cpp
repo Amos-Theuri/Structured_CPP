@@ -4,18 +4,20 @@ using namespace std;
 
 int main()
 {
-    int iNoUnits;
-    double dUnitPrice = 42.50,dPrice, dTotalPrice, dTax, dTotaltax;
-    const double dDisc=0.1;
+    int iNoUnits, dTax;
+    double dUnitPrice = 42.50,dPrice, dTotalPrice, dBtax, dTotaltax,dDiscount, dDiscprice;
+    const double dDisc = 0.9;
 
     cout << "Enter number of items: ";
     cin >> iNoUnits;
-    cout << "Enter tax percentage";
+    cout << "Enter tax percentage: ";
     cin >> dTax;
-    dTax = dTax/100;
-    dPrice = (dUnitPrice * iNoUnits)/dDisc;
-    dTotaltax = dPrice * dTax;
-    dTotalPrice = dPrice + dTotaltax;
+    dBtax = (double) dTax/100;
+    dPrice = dUnitPrice * iNoUnits;
+    dDiscprice = dPrice * dDisc;
+    dDiscount = dPrice - dDiscprice;
+    dTotaltax = dDiscprice * dBtax;
+    dTotalPrice = dDiscprice + dTotaltax;
 
     cout << "INVOICE" << endl
          << "======="<<endl;
@@ -23,6 +25,9 @@ int main()
     cout << "Quantity:     " << iNoUnits << endl;
     cout << "Unit Price:    "<< dUnitPrice << endl;
     cout << "Price:    "  << dPrice << endl;
+    cout << "Discounted price: " << dDiscprice << endl;
+    cout << "Discount: " << dDiscount << endl;
     cout << "Tax:     " << dTotaltax << endl;
     cout << "Total:   " << dTotalPrice << endl;
+
 }
