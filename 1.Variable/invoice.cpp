@@ -5,12 +5,15 @@ using namespace std;
 int main()
 {
     int iNoUnits;
-    double dUnitPrice = 42.50,dPrice, dTotalPrice, dTotaltax;
-    const double dTax = 0.25;
+    double dUnitPrice = 42.50,dPrice, dTotalPrice, dTax, dTotaltax;
+    const double dDisc=0.1;
 
     cout << "Enter number of items: ";
     cin >> iNoUnits;
-    dPrice = dUnitPrice * iNoUnits;
+    cout << "Enter tax percentage";
+    cin >> dTax;
+    dTax = dTax/100;
+    dPrice = (dUnitPrice * iNoUnits)/dDisc;
     dTotaltax = dPrice * dTax;
     dTotalPrice = dPrice + dTotaltax;
 
