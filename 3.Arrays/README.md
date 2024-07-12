@@ -23,3 +23,7 @@ for (int i=1; i<=30; i++)
 {
 dTempJun[i] = dTempApril
 }
+
+## comparing arrays
+
+arrays can be compared through a loop that goes through each element of the arrays being compared and returns a true or false value after each comparison.
