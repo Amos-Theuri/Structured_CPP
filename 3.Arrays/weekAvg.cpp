@@ -7,6 +7,8 @@ int main()
 	double dAvg, dSum = 0;
 	double dTempWeek[iNoDays+1];
 	int i;
+
+	//take input about the weeks temperature
 	for (i =1; i<=iNoDays; i++)
 	{
 		cout << "Enter Temperature day "<< i<<": ";
@@ -17,6 +19,7 @@ int main()
 
 	cout<<"Average week temp is "<<dAvg<<endl;
 
+	//declare the days when the temp was above average
 	cout <<"Days temp was above normal"<< endl;
 	for (i =1; i<=iNoDays; i++)
 	{
